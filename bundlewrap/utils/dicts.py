@@ -205,7 +205,7 @@ def map_dict_keys(dict_obj, _base=None):
         set([('foo', 'bar'), ('baz',)])
     """
     if _base is None:
-        _base = tuple()
+        _base = ()
     keys = set([_base + (key,) for key in dict_obj.keys()])
     for key, value in dict_obj.items():
         if isinstance(value, dict):

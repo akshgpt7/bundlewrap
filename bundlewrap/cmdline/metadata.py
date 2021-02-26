@@ -97,9 +97,9 @@ def bw_metadata(repo, args):
     target_nodes = get_target_nodes(repo, args['targets'])
     key_paths = sorted([
         tuple(path.strip().split("/")) for path in args['keys'] if path
-    ]) or [tuple()]
+    ]) or [()]
     if len(target_nodes) > 1:
-        if key_paths == [tuple()]:
+        if key_paths == [()]:
             io.stdout(_("{x} at least one key is required when viewing multiple nodes").format(x=red("!!!")))
             exit(1)
         if args['blame']:

@@ -632,7 +632,7 @@ class Node:
         interactive=False,
         force=False,
         show_diff=True,
-        skip_list=tuple(),
+        skip_list=(),
         workers=4,
     ):
         if not list(self.items):
