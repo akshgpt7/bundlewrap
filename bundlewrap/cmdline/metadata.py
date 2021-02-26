@@ -84,7 +84,7 @@ def _sort_dict_colorblind(old_dict):
     else:
         new_dict = {}
 
-    for key in sorted(old_dict.keys(), key=lambda k: ansi_clean(k)):
+    for key in sorted(old_dict.keys(), key=ansi_clean):
         if isinstance(old_dict[key], dict):
             new_dict[key] = _sort_dict_colorblind(old_dict[key])
         else:
